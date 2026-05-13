@@ -8,7 +8,7 @@ function Inicio() {
           <div className="container px-3 px-lg-0">
 
 
-              <div className="hero-panel p-3 p-lg-5 shadow-sm rounded-4 bg-white">
+              <div className="hero-panel p-3 p-lg-5 shadow-sm rounded-4">
 
 
                   <div className="row align-items-center g-3 g-lg-5">

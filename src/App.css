@@ -13,21 +13,26 @@
 
 .page-section {
   padding: 2rem 0;
+
 }
 
 .hero-panel {
-  background: rgba(255, 255, 255, 0.86);
+  /* Bajamos a 0.6 para que el desenfoque (blur) sea visible */
+  background: rgba(255, 240, 248, 0.7);
   border: 1px solid rgba(223, 198, 208, 0.7);
   border-radius: 0.75rem;
   box-shadow: 0 1rem 2rem rgba(90, 52, 78, 0.08);
-  backdrop-filter: blur(10px);
+
 }
+
 
 .section-card {
   height: 100%;
   border: 1px solid #f0dbe2;
   border-radius: 0.75rem;
   box-shadow: 0 0.5rem 1.2rem rgba(90, 52, 78, 0.06);
+  /* 0.8 equivale al 80% de opacidad */
+  background: rgba(255, 240, 248, 0.8);
 }
 
 .site-nav {
@@ -241,6 +246,7 @@
   .footer-shell .container {
     padding-left: 1rem;
     padding-right: 1rem;
+
   }
 
   .footer-shell p {

@@ -57,14 +57,14 @@ function Actividades() {
       <div className="container">
         <div className="row g-4">
           <div className="col-lg-4">
-            <div className="section-card card border-0">
+            <div className="section-card card border-0 relleno">
               <div className="card-body p-4">
                 <h1 className="h2 fw-semibold mb-3">Actividades</h1>
                 <p className="mb-4">
-                  Cada actividad tiene su propia URL dinamica.
+                  Selecciona la actividad que te interesa.
                 </p>
 
-                <div className="list-group">
+                <div className="list-group ">
                   {activities.map((activity) => (
                     <NavLink
                       key={activity.slug}
@@ -94,29 +94,29 @@ function Actividades() {
                   alt={activeActivity.title}
                   className="img-fluid rounded-4 mb-4"
                 />
-                <h2 className="display-6 fw-semibold mb-3">
+                <h2 className="display-6 fw-semibold mb-3 ">
                   {activeActivity.title}
                 </h2>
                 <p className="mb-4">{activeActivity.description}</p>
 
                 <div className="row g-3">
                   <div className="col-md-6">
-                    <div className="p-3 bg-body-tertiary rounded-3 h-100">
+                    <div className="p-3 bg-body-tertiary rounded-3 h-100 border border-gray-200">
                       Nivel adaptable
                     </div>
                   </div>
                   <div className="col-md-6">
-                    <div className="p-3 bg-body-tertiary rounded-3 h-100">
+                    <div className="p-3 bg-body-tertiary rounded-3 h-100 border border-gray-200">
                       Horarios por definir
                     </div>
                   </div>
                   <div className="col-md-6">
-                    <div className="p-3 bg-body-tertiary rounded-3 h-100">
+                    <div className="p-3 bg-body-tertiary rounded-3 h-100 border border-gray-200">
                       Clases presenciales
                     </div>
                   </div>
                   <div className="col-md-6">
-                    <div className="p-3 bg-body-tertiary rounded-3 h-100">
+                    <div className="p-3 bg-body-tertiary rounded-3 h-100 border border-gray-200">
                       Reserva previa
                     </div>
                   </div>
