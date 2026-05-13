@@ -18,7 +18,7 @@ function ElCentro() {
 
           <div className="col-lg-6">
             <div className="section-card card border-0">
-              <div className="card-body p-4">
+              <div className="card-body p-0">
                 <img
                     src={Sara}
                     alt="Portada Pranature"
