@@ -1,16 +1,43 @@
 # React + Vite
+Enlace a la web: https://delberrepository.github.io/escuelaPranature/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Pranature
 
-Currently, two official plugins are available:
+Aplicación web SPA desarrollada con React y Vite para un centro de danza y bienestar.  
+El proyecto implementa una estructura moderna de navegación y componentes reutilizables utilizando React Router y Bootstrap.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Características
 
-## React Compiler
+- SPA (Single Page Application)
+- Navegación dinámica con React Router
+- Uso de `NavLink` para navegación activa
+- Componentes reutilizables
+- Diseño responsive con Bootstrap
+- Footer dinámico y común en toda la aplicación
+- Rutas dinámicas para actividades
+- Uso del hook `useParams`
+- Estructura moderna y escalable
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Secciones principales
 
-## Expanding the ESLint configuration
+- Inicio
+- El Centro
+- Tarifas
+- Contacto
+- Actividades
+    - Yoga
+    - Danza Oriental
+    - Nutrición y Talleres
+    - Clases Privadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Funcionalidad destacada
+
+La sección de actividades funciona mediante rutas dinámicas.  
+Las actividades se almacenan en un array y cada una genera automáticamente su propia URL utilizando `useParams`, permitiendo navegar entre actividades de forma dinámica.
+
+Ejemplo:
+
+```bash
+/actividades/yoga
+/actividades/danza-oriental
+/actividades/nutricion
