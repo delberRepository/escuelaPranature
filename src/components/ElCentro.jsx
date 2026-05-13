@@ -6,11 +6,11 @@ function ElCentro() {
         <div className="row g-4">
           <div className="col-lg-6">
             <h1 className="display-6 fw-semibold mb-3">El centro</h1>
-            <p className="mb-4">
+            <p className="mb-4 text-dark">
               Este bloque presenta el espacio, la filosofia del centro y el
               tipo de experiencia que encontrara quien venga a clase.
             </p>
-            <p className="mb-0">
+            <p className="mb-0 text-dark">
               Puedes ampliar mas adelante con fotos, equipo docente, horarios y
               valores del proyecto.
             </p>

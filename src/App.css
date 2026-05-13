@@ -1,9 +1,14 @@
 .app-shell {
   min-height: 100vh;
   padding-bottom: 6rem;
-  background:
+ /* background:
     radial-gradient(circle at top, rgba(255, 215, 227, 0.45), transparent 30%),
-    linear-gradient(180deg, #fff8fb 0%, #ffffff 40%, #fffaf7 100%);
+    linear-gradient(180deg, #c099dc 0%, #ffffff 40%, #ee24f6 100%);*/
+  background-image: url('./assets/portada-cabecera.jpg');
+  background-size: cover;    /* La imagen cubre todo el espacio disponible */
+  background-position: center; /* Centra la foto */
+  background-repeat: no-repeat; /* Evita que la foto se duplique como mosaico */
+  background-attachment: fixed;
 }
 
 .page-section {
