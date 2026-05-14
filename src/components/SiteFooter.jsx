@@ -16,8 +16,8 @@ function SiteFooter() {
 
           <div className="d-flex flex-wrap">
             <p className="mb-0 small" style={{ fontSize: '12px' }}>
-              <span className="fw-semibold text-dark">Contacto </span>: pranature@gmail.com // 619 622 534 <br />
-                <span className="fw-semibold text-dark">Dirección </span>: Calle Urogallo 21, bajo derecha
+              pranature@gmail.com // 619 622 534 <br />
+                Calle Urogallo 21, bajo derecha
             </p>
           </div>
         </div>

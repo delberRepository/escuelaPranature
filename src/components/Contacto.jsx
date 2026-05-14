@@ -24,10 +24,21 @@ function Contacto() {
                       <p className="mb-0">pranature@gmail.com</p>
                     </div>
                   </div>
+
                   <div className="col-12">
                     <div className="p-3 rounded-3 bg-body-tertiary border border-gray-200">
                       <strong>Direccion</strong>
-                      <p className="mb-0">Calle Urogallo 21, Madrid</p>
+                      <p className="mb-3">Calle Urogallo 21, Madrid</p>
+
+                      <div className="ratio ratio-16x9 rounded-3 overflow-hidden">
+                        <iframe
+                            title="Mapa Pranature"
+                            src="https://www.google.com/maps?q=Calle%20Urogallo%2021,%20Madrid&z=16&output=embed"
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            allowFullScreen
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
