@@ -24,7 +24,7 @@ function Inicio() {
                   Pranature es un espacio en el que se te invita...
                 </p>
                 <div className="d-flex flex-wrap gap-3">
-                  <NavLink to="/actividades" className="btn btn-rosa px-3 px-lg-4 py-2 py-lg-3 fs-6 fs-lg-5">
+                  <NavLink to="/actividades//danza-oriental" className="btn btn-rosa px-3 px-lg-4 py-2 py-lg-3 fs-6 fs-lg-5">
                     Ver actividades
                   </NavLink>
                   <NavLink to="/contacto" className="btn btn-outline-dark  px-3 px-lg-4 py-2 py-lg-3 fs-6 fs-lg-5">

@@ -5,7 +5,8 @@ import logo from '../assets/logo.png'
 const navItems = [
   { to: '/', label: 'Inicio', end: true },
   { to: '/centro', label: 'El centro' },
-  { to: '/actividades', label: 'Actividades' },
+  { to: '/actividades//danza-oriental', label: 'Actividades' },
+  { to: '/horarios', label: 'Horarios' },
   { to: '/tarifas', label: 'Tarifas' },
   { to: '/contacto', label: 'Contacto' },
 ]

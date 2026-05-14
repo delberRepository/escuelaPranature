@@ -5,6 +5,7 @@ import ElCentro from './components/ElCentro'
 import Tarifas from './components/Tarifas'
 import Contacto from './components/Contacto'
 import Actividades from './components/Actividades'
+import Horarios from './components/Horarios'
 import './App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Inicio />} />
           <Route path="centro" element={<ElCentro />} />
           <Route path="tarifas" element={<Tarifas />} />
+          <Route path="horarios" element={<Horarios />} />
           <Route path="contacto" element={<Contacto />} />
           <Route path="actividades" element={<Actividades />} />
           <Route path="actividades/:actividadSlug" element={<Actividades />} />
@@ -36,4 +38,3 @@ function App() {
 }
 
 export default App
-
