@@ -49,7 +49,7 @@ function Tarifas() {
               <div className="section-card card border-0">
                 <div className="card-body p-4">
                   <h2 className="h4 mb-3">{plan.title}</h2>
-                  <p className="display-6 fw-semibold text-dark mb-3">
+                  <p className="display-6 fw-semibold text-gold mb-3">
                     {plan.price}
                   </p>
                   <p className="mb-0" style={{ whiteSpace: 'pre-line' }}>

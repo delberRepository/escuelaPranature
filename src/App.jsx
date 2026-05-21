@@ -6,6 +6,7 @@ import Tarifas from './components/Tarifas'
 import Contacto from './components/Contacto'
 import Actividades from './components/Actividades'
 import Horarios from './components/Horarios'
+import Portfolio from './components/Portfolio'
 import './App.css'
 
 function App() {
@@ -18,12 +19,13 @@ function App() {
           <Route path="tarifas" element={<Tarifas />} />
           <Route path="horarios" element={<Horarios />} />
           <Route path="contacto" element={<Contacto />} />
+          <Route path="portfolio" element={<Portfolio />} />
           <Route path="actividades" element={<Actividades />} />
           <Route path="actividades/:actividadSlug" element={<Actividades />} />
         </Route>
       </Routes>
       <a
-          href="https://wa.me/34629132666?text=Hola!%20Me%20gustaría%20información%20sobre%20las%20clases"
+          href="https://wa.me/34619622534?text=Hola!%20Me%20gustaría%20información%20sobre%20las%20clases"
           className="whatsapp-float"
           target="_blank"
           rel="noopener noreferrer"

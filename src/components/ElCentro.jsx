@@ -1,4 +1,17 @@
 import Sara from '../assets/portada2.jpg';
+
+const centerFits = [
+  'Buscas un espacio con clases reducidas y personalizadas.',
+  'Te gusta el trabajo de corrección técnica.',
+  'Sientes curiosidad por explorarte a nivel emocional y artístico.',
+]
+
+const centerDoesNotFit = [
+  'Solo buscas pasar un buen rato y desconectar.',
+  'No te interesa indagar en la técnica ni las correcciones personalizadas.',
+  'No eres afín al trabajo conjunto cuerpo-mente.',
+]
+
 function ElCentro() {
   return (
     <section className="page-section">
@@ -12,27 +25,33 @@ function ElCentro() {
               e autoconocimiento para conectar con tus emociones más genuinas y explorar tu potencia.
               <br /><em>" Las mejores cualidades de nuestra naturaleza, como la flor de los frutales, sólo pueden preservarse
                 con el trato más delicado." </em> <br /><strong>H.D. Thoreau.</strong> <br /><br />
-              Pranature es tu centro si:
+            </p>
 
-
-              <ul>
-                <li>Buscas un espacio con clases  reducidas y personalizadas.</li>
-                <li>Te gusta el trabajo de corrección técnica.</li>
-                <li>Sientes curiosidad por explorarte
-                  a nivel emocional y artístico.</li>
+            <div className="center-check-block mb-4">
+              <h2 className="h5 fw-semibold mb-3">Pranature es tu centro si:</h2>
+              <ul className="icon-list icon-list-ok">
+                {centerFits.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
+            </div>
 
-              No es tu centro si:
-             <ul>
-                <li>solo buscas pasar un buen rato y desconectar</li>
-                <li>no te interesa indagar en la técnica ni las correcciones personalizadas.</li>
-                <li>no eres afín al trabajo conjunto cuerpo-mente.</li>
+            <div className="center-check-block mb-4">
+              <h2 className="h5 fw-semibold mb-3">No es tu centro si:</h2>
+              <ul className="icon-list icon-list-x">
+                {centerDoesNotFit.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
 
-             </ul>
-               La directora del centro Sara Morillo cuenta con una amplia experiencia como
-              docente así como nutricionista clínica. <br /><br />
+            <p className="mb-4 text-dark">
+              La directora del centro Sara Morillo cuenta con una amplia experiencia como
+              docente así como nutricionista clínica.
+            </p>
 
-                <h2>Me gustaría contarte un poco sobre mí. </h2>
+            <h2 className="h4 fw-semibold mb-3">Me gustaría contarte un poco sobre mí.</h2>
+            <p className="mb-4 text-dark">
                 Desde muy pequeña me ha gustado cuidarme y
                 llevar un estilo de vida saludable. Lo que me llevo a profundizar en el estudio de
                 la alimentación y a estudiar Nutrición y Dietética (UAX). Me especialice en la

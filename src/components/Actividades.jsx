@@ -1,9 +1,102 @@
+import { useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import yoga from '../assets/yoga2.jpg'
-import danza from '../assets/portada3.png'
+import energia from '../assets/energiaFem.jpeg'
 import nutricion from '../assets/nutri.png'
 import clases from '../assets/clase.png'
-import taller from '../assets/Sara.png'
+import danza from '../assets/Sara.png'
+import taller from '../assets/curso8deMayo.jpeg'
+import tallerVideo from '../assets/taller.mp4'
+
+function ActivityMedia({ activity }) {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  if (!activity.media) {
+    return (
+      <img
+        src={activity.foto}
+        alt={activity.title}
+        className="img-fluid rounded-4 mb-4"
+      />
+    )
+  }
+
+  const media = activity.media ?? [
+    {
+      type: 'image',
+      src: activity.foto,
+      alt: activity.title,
+    },
+  ]
+  const activeMedia = media[activeIndex]
+  const hasMultipleMedia = media.length > 1
+
+  const showPrevious = () => {
+    setActiveIndex((currentIndex) =>
+      currentIndex === 0 ? media.length - 1 : currentIndex - 1,
+    )
+  }
+
+  const showNext = () => {
+    setActiveIndex((currentIndex) => (currentIndex + 1) % media.length)
+  }
+
+  return (
+    <div className="activity-media rounded-4 mb-4">
+      {activeMedia.type === 'video' ? (
+        <video
+          src={activeMedia.src}
+          className="activity-media-item"
+          controls
+          playsInline
+        />
+      ) : (
+        <img
+          src={activeMedia.src}
+          alt={activeMedia.alt}
+          className="activity-media-item"
+        />
+      )}
+
+      {hasMultipleMedia && (
+        <>
+          <button
+            type="button"
+            className="activity-media-control activity-media-control-prev"
+            onClick={showPrevious}
+            aria-label="Ver contenido anterior"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            className="activity-media-control activity-media-control-next"
+            onClick={showNext}
+            aria-label="Ver contenido siguiente"
+          >
+            ›
+          </button>
+
+          <div className="activity-media-dots" aria-label="Selector de contenido">
+            {media.map((item, index) => (
+              <button
+                key={`${item.type}-${index}`}
+                type="button"
+                className={`activity-media-dot ${
+                  index === activeIndex ? 'is-active' : ''
+                }`}
+                onClick={() => setActiveIndex(index)}
+                aria-label={`Ver ${item.type === 'video' ? 'video' : 'foto'} ${
+                  index + 1
+                }`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  )
+}
 
 function Actividades() {
   const { actividadSlug } = useParams()
@@ -24,7 +117,7 @@ function Actividades() {
           '<em>"Habita en lo eterno mientras hagas tu asana regulando la respiración a través de pranayama medita en la siempre ' +
           'compasiva morada del corazón" </em><br />' +
           ' <strong>T.Krishnamacharya.</strong> ',
-      foto: taller,
+      foto: danza,
     },
     {
       slug: 'yoga',
@@ -53,37 +146,62 @@ function Actividades() {
 
     },
     {
-      slug: 'talleres',
-      title: 'Talleres',
+      slug: 'energia',
+      title: 'Energia Femenina',
       description:
-        'ENERGIA FEMENINA <br /> ' +
+
           'Esta clase esta enfocada en restaurar y ampliar la energía a través de ciertos movimientos de danza y técnicas energéticas, j' +
           'unto ejercicios de meditacion y visualización, para acceder a un potencial muy poderoso. Para ello vamos a hacer un ' +
           'trabajo de armonización de chacras y de conexión con el útero y el cinturón de vida. Esta clase es para ti si sientes ' +
           'el llamado de hacer un trabajo con tu energía femenina, para armonizarte y acceder a nuestro infinito potencial como mujeres. ',
-      foto: danza,
+      foto: energia,
+    },
+    {
+      slug: 'talleres',
+      title: 'Talleres',
+      description:
+        'TECNICA DE DANZA ORIENTAL <br /> ' +
+          '9 de Mayo ',
+      foto: taller,
+      media: [
+        {
+          type: 'image',
+          src: taller,
+          alt: 'Cartel del taller de tecnica de danza oriental',
+        },
+        {
+          type: 'video',
+          src: tallerVideo,
+        },
+      ],
     },
     {
       slug: 'clases-privadas',
       title: 'Clases privadas',
       description:
-        'DANZA: Saca tu máximo potencial en danza.  <br />' +
-          'Las clases privadas son para ti si: <br /> ' +
-          '<ul>' +
-          '<li>quieres aprender de 0 y prefieres un trabajo individual</li>' +
-          '<li>quieres trabajar con un objetivo concreto.</li> ' +
-          '<li>necesitas pulir técnica o expresión</li> ' +
-          '<li>quieres una coreografía o un trabajo exhaustivo para concursos de danza.</li> ' +
-          '<li>eres profesional y quieres trabajar con un objetivo concreto.</li> ' +
-          '</ul>' +
-          'YOGA<br />' +
-          ' Las clases privadas de Yoga son para ti si: <br />' +
-          '<ul>' +
-          '<li>tienes alguna lesión o condición que requiera un trabajo más personalizado</li>' +
-          '<li>quieres potenciar alguna postura o alguna parte especifica. </li>' +
-
-          '</ul> <br /> ¡¡Novedad!! ¡¡¡Clases en dúo!!! Comparte con un familiar, amigo o tu pareja para una práctica compartida. ',
+        'DANZA: Saca tu máximo potencial en danza.',
       foto :clases,
+      checkSections: [
+        {
+          title: 'Las clases privadas de danza son para ti si:',
+          items: [
+            'Quieres aprender de 0 y prefieres un trabajo individual.',
+            'Quieres trabajar con un objetivo concreto.',
+            'Necesitas pulir técnica o expresión.',
+            'Quieres una coreografía o un trabajo exhaustivo para concursos de danza.',
+            'Eres profesional y quieres trabajar con un objetivo concreto.',
+          ],
+        },
+        {
+          title: 'Las clases privadas de Yoga son para ti si:',
+          items: [
+            'Tienes alguna lesión o condición que requiera un trabajo más personalizado.',
+            'Quieres potenciar alguna postura o alguna parte especifica.',
+          ],
+        },
+      ],
+      closingText:
+        '¡¡Novedad!! ¡¡¡Clases en dúo!!! Comparte con un familiar, amigo o tu pareja para una práctica compartida.',
     },
   ]
 
@@ -128,11 +246,7 @@ function Actividades() {
                 {/*}  <span className="badge rounded-pill text-bg-light border border-danger-subtle text-danger-emphasis mb-3">
                   /actividades/{activeActivity.slug}
                 </span>*/}
-                <img
-                  src={activeActivity.foto}
-                  alt={activeActivity.title}
-                  className="img-fluid rounded-4 mb-4"
-                />
+                <ActivityMedia key={activeActivity.slug} activity={activeActivity} />
                 <h2 className="display-6 fw-semibold mb-3 ">
                   {activeActivity.title}
                 </h2>
@@ -140,6 +254,19 @@ function Actividades() {
                     className="mb-4"
                     dangerouslySetInnerHTML={{ __html: activeActivity.description }}
                 />
+                {activeActivity.checkSections?.map((section) => (
+                  <div key={section.title} className="activity-check-block mb-4">
+                    <h3 className="h5 fw-semibold mb-3">{section.title}</h3>
+                    <ul className="icon-list icon-list-ok">
+                      {section.items.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+                {activeActivity.closingText ? (
+                  <p className="mb-4">{activeActivity.closingText}</p>
+                ) : null}
 
                 <div className="row g-3">
                   <div className="col-md-6">

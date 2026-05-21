@@ -5,9 +5,10 @@ import logo from '../assets/logo.png'
 const navItems = [
   { to: '/', label: 'Inicio', end: true },
   { to: '/centro', label: 'El centro' },
-  { to: '/actividades//danza-oriental', label: 'Actividades' },
+  { to: '/actividades', label: 'Actividades' },
   { to: '/horarios', label: 'Horarios' },
   { to: '/tarifas', label: 'Tarifas' },
+  { to: '/portfolio', label: 'Portfolio' },
   { to: '/contacto', label: 'Contacto' },
 ]
 

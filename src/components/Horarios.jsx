@@ -31,15 +31,19 @@ const weeklySchedule = [
     day: 'Viernes',
     slots: [],
   },
-  {
-    day: 'Sábado',
-    slots: [],
-  },
-  {
-    day: 'Domingo',
-    slots: [],
-  },
+
 ]
+
+const getStartMinutes = (time) => {
+  const [hours, minutes] = time.split(' - ')[0].split(':').map(Number)
+  return hours * 60 + minutes
+}
+
+const scheduleTimes = Array.from(
+  new Set(
+    weeklySchedule.flatMap((day) => day.slots.map((slot) => slot.time)),
+  ),
+).sort((firstTime, secondTime) => getStartMinutes(firstTime) - getStartMinutes(secondTime))
 
 function Horarios() {
   return (
@@ -58,40 +62,41 @@ function Horarios() {
               <table className="table schedule-table align-middle mb-0">
                 <thead>
                   <tr>
-                    <th scope="col">Día</th>
-                    <th scope="col">Horario</th>
-                    <th scope="col">Actividad</th>
+                    <th scope="col" className="schedule-time">
+                      Horario
+                    </th>
+                    {weeklySchedule.map((day) => (
+                      <th key={day.day} scope="col" className="text-center">
+                        {day.day}
+                      </th>
+                    ))}
                   </tr>
                 </thead>
                 <tbody>
-                  {weeklySchedule.map((day) =>
-                    day.slots.length > 0 ? (
-                      day.slots.map((slot, index) => (
-                        <tr key={`${day.day}-${slot.time}`}>
-                          {index === 0 ? (
-                            <th
-                              scope="row"
-                              rowSpan={day.slots.length}
-                              className="schedule-day"
-                            >
-                              {day.day}
-                            </th>
-                          ) : null}
-                          <td>{slot.time}</td>
-                          <td>{slot.activity}</td>
-                        </tr>
-                      ))
-                    ) : (
-                      <tr key={day.day}>
-                        <th scope="row" className="schedule-day">
-                          {day.day}
-                        </th>
-                        <td colSpan="2" className="text-secondary">
-                          Sin clases
-                        </td>
-                      </tr>
-                    ),
-                  )}
+                  {scheduleTimes.map((time) => (
+                    <tr key={time}>
+                      <th scope="row" className="schedule-time">
+                        {time}
+                      </th>
+                      {weeklySchedule.map((day) => {
+                        const slot = day.slots.find(
+                          (daySlot) => daySlot.time === time,
+                        )
+
+                        return (
+                          <td key={`${day.day}-${time}`} className="text-center">
+                            {slot ? (
+                              <span className="schedule-activity">
+                                {slot.activity}
+                              </span>
+                            ) : (
+                              <span className="text-secondary">-</span>
+                            )}
+                          </td>
+                        )
+                      })}
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
