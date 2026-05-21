@@ -20,9 +20,9 @@ function Inicio() {
                 <h1 className="display-4 fw-bold mb-3"> {/* 'display-4' es un poco más grande que 'display-5' */}
                   Un espacio para moverte, cuidarte y aprender.
                 </h1>
-                <p className="lead mb-4 text-secondary">
+                  {/*<p className="lead mb-4 text-secondary">
                   Pranature es un espacio en el que se te invita...
-                </p>
+                </p>*/}
                 <div className="d-flex flex-wrap gap-3">
                   <NavLink to="/actividades//danza-oriental" className="btn btn-rosa px-3 px-lg-4 py-2 py-lg-3 fs-6 fs-lg-5">
                     Ver actividades
