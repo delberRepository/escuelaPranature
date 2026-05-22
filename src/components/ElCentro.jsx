@@ -60,16 +60,17 @@ function ElCentro() {
                 (Deusto Salud). Llevo más de 10 años ayudando a personas a sanar y a mejorar su
                 imagen a través de la alimentación. <br /><br />
                 Siempre he sido muy curiosa y me he sentido
-                atraída por el conocimiento. Esa pasión me llevo a graduarme en filosofía (UCM)
-                a un postrado en psicoanálisis y teoría de la cultura (UCM) <br /><br />
-                Mi practica espiritual y mi inquietud por conocer otras culturas me llevo a la práctica de
-                Yoga desde muy temprana edad.  Soy certificada en Yoga Alliance 250h en las
-                especialidades de Vinyasa yoga y Yin yoga (Zentro Urban Zuy) desde el 2019.<br /><br />
+                atraída por el conocimiento. Esa pasión me llevo a graduarme en Filosofía (UCM)
+                a un postrado en Psicoanálisis y Teoría de la Cultura (UCM) <br /><br />
+                Me acerque al yoga como forma de adquirir mas flexibilidad y enseguira me vi atrapada
+                por su filosofia y sus enseñanzas, que van más allá de la esterilla, lo que me llevo
+                a especializarme como profesora de Yoga en el centro Urban Zuy (yoga Alliance 250h)
+                desde el 2019. <br /><br />
                 La danza siempre ha sido mi gran pasión. Desde los 6 años que tome mi primera
-                clase de ballet hasta hoy que he conseguido hacer de la danza mi profesión,
-                me he formado con los maestros más prestigiosos tanto en el ámbito nacional
+                clase de ballet hasta hoy que he conseguido hacer de la danza mi profesión.<br /><br />
+                Me he formado con los maestros más prestigiosos tanto en el ámbito nacional
                 como internacional, así como conseguidos premios en festivales de danza
-                internacionales. Como bailarina trabajo ofreciendo mi show en los restaurantes
+                internacionales. <br />Como bailarina trabajo ofreciendo mi show en los restaurantes
                 árabes más prestigiosos de Madrid así como participando en eventos. Como docente
                 llevo desde el 2017 impartiendo clases, lo que me ha hecho crear un método propio
                 en el que se aúna técnica y trabajo expresivo, para conectar con nuestras
@@ -79,12 +80,12 @@ function ElCentro() {
           </div>
 
             <div className="col-lg-6">
-                <div className="section-card card border-0 h-100">
+                <div className="section-elcentro card border-0 h-100">
                     <div className="card-body p-0 h-100">
                         <img
                             src={Sara}
                             alt="Portada Pranature"
-                            className="w-100 h-100 rounded"
+                            className="w-100 h-50 rounded"
                             style={{ objectFit: 'cover' }}
                         />
                     </div>

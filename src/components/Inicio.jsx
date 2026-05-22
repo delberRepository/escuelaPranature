@@ -18,7 +18,7 @@ function Inicio() {
             Danza, bienestar y comunidad
           </span>
                 <h1 className="display-4 fw-bold mb-3"> {/* 'display-4' es un poco más grande que 'display-5' */}
-                  Un espacio para moverte, cuidarte y aprender.
+                    Pranature es un espacio de arte, movimiento y bienestar interior.
                 </h1>
                   {/*<p className="lead mb-4 text-secondary">
                   Pranature es un espacio en el que se te invita...

@@ -21,7 +21,7 @@ function Contacto() {
                   <div className="col-md-6">
                     <div className="p-3 rounded-3 bg-body-tertiary h-100 border border-gray-200">
                       <strong>Email</strong>
-                      <p className="mb-0">pranature@gmail.com</p>
+                      <p className="mb-0">pranaturecentrodeyoga@gmail.com</p>
                     </div>
                   </div>
 

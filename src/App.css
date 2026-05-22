@@ -34,6 +34,12 @@
   /* 0.8 equivale al 80% de opacidad */
   background: rgba(255, 240, 248, 0.8);
 }
+.section-elcentro{
+  height: 100%;
+  margin-top:70px;
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 0);
+}
 
 .site-nav {
   border-bottom: 1px solid rgba(223, 198, 208, 0.7);
@@ -473,7 +479,9 @@
   .nav-brand {
     align-self: flex-start;
   }
-
+  .section-elcentro{
+    margin-top: 10px;
+  }
   .nav-toggle {
     display: inline-flex;
     align-items: center;
@@ -610,5 +618,9 @@
   .whatsapp-float {
     right: 14px;
     bottom: 4.7rem;
+  }
+  .section-elcentro{
+    margin-top: 0px;
+
   }
 }
