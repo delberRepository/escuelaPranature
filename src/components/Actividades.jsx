@@ -208,7 +208,7 @@ function Actividades() {
   const activeActivity =
     activities.find((activity) => activity.slug === actividadSlug) ??
     activities[0]
-  const showActivityHighlights = !['talleres', 'clases-privadas'].includes(
+  const showActivityHighlights = !['talleres', 'clases-privadas','nutricion', 'energia'].includes(
     activeActivity.slug,
   )
 
@@ -224,7 +224,7 @@ function Actividades() {
                   Selecciona la actividad que te interesa.
                 </p>
 
-                <div className="list-group ">
+                <div className="activity-list list-group">
                   {activities.map((activity) => (
                     <NavLink
                       key={activity.slug}

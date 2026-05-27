@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import Inicio from './components/Inicio'
 import ElCentro from './components/ElCentro'
@@ -20,7 +20,7 @@ function App() {
           <Route path="horarios" element={<Horarios />} />
           <Route path="contacto" element={<Contacto />} />
           <Route path="portfolio" element={<Portfolio />} />
-          <Route path="actividades" element={<Actividades />} />
+          <Route path="actividades" element={<Navigate to="danza-oriental" replace />} />
           <Route path="actividades/:actividadSlug" element={<Actividades />} />
         </Route>
       </Routes>

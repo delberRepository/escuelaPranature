@@ -17,7 +17,7 @@ function ElCentro() {
     <section className="page-section">
       <div className="container">
         <div className="row g-4">
-          <div className="col-lg-6">
+          <div className="col-lg-6 elcentro-text">
             <h1 className="display-6 fw-semibold mb-3">El centro</h1>
             <p className="mb-4 text-dark">
               Pranature es un espacio dedicado al arte y al bienestar. La filosofía del centro se basa en el

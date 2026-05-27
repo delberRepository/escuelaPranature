@@ -9,6 +9,9 @@ import foto7 from '../portfolio/7.jpeg'
 import foto8 from '../portfolio/8.jpeg'
 import foto9 from '../portfolio/9.jpeg'
 import foto10 from '../portfolio/10.jpeg'
+import foto11 from '../portfolio/11.png'
+import foto12 from '../portfolio/12.jpg'
+
 
 
 const portfolioPhotos = [
@@ -62,6 +65,16 @@ const portfolioPhotos = [
   },
   {
     src: foto10,
+    alt: 'Ambiente del centro Pranature',
+
+  },
+  {
+    src: foto11,
+    alt: 'Ambiente del centro Pranature',
+
+  },
+  {
+    src: foto12,
     alt: 'Ambiente del centro Pranature',
 
   },

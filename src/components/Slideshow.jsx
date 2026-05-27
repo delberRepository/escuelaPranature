@@ -2,11 +2,9 @@
 import { useState, useEffect } from 'react';
 import portada1 from '../assets/portada.jpg';
 import portada2 from '../assets/portada2.jpg';
-import portada3 from '../assets/portada3.png';
-import portada4 from '../assets/portada4.jpg';
 
 
-const imagenes = [portada1, portada2, portada3, portada4];
+const imagenes = [portada1, portada2];
 
 export default function Slideshow() {
     const [indice, setIndice] = useState(0);
