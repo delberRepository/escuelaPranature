@@ -113,10 +113,7 @@ function Actividades() {
           'tus emociones.<br /><br />Mis clases se enfocan desde un trabajo artístico y de expresión corporal, trabajando con diferentes ' +
           'arquetipos que nos ayudan a traducir el movimiento del cuerpo en el lenguaje del alma.  Tenemos clases de todos los ' +
           'niveles y ofrecemos tanto clases grupales, en grupos reducidos para una atención más personalizada, como clases ' +
-          'individuales si quieres hacer un trabajo más específico para lograr juntas sacar tu máximo potencial.  <br /><br />' +
-          '<em>"Habita en lo eterno mientras hagas tu asana regulando la respiración a través de pranayama medita en la siempre ' +
-          'compasiva morada del corazón" </em><br />' +
-          ' <strong>T.Krishnamacharya.</strong> ',
+          'individuales si quieres hacer un trabajo más específico para lograr juntas sacar tu máximo potencial.',
       foto: danza,
     },
     {
@@ -129,7 +126,10 @@ function Actividades() {
           'corporal.<br /> <br /> En Pranature ofrecemos dos estilos: <br /> <br /> <strong>Vinyasa hatha:</strong> <br /> Es un estilo más dinámico, que incluye transiciones ' +
           'entre asanas. Ideal si necesitas una práctica más energética.<br /><br />  <strong>Yin yoga:</strong><br />  Es un estilo de yoga, que se presenta' +
           ' como una práctica integral que aborda el trabajo de meridianos y de elasticidad articular.  Ideal si necesitas' +
-          ' una práctica más restaurativa. Ambos estilos tienen una parte de meditación al final de la clase. ',
+          ' una práctica más restaurativa. Ambos estilos tienen una parte de meditación al final de la clase. <br /><br />' +
+      '<em>"Habita en lo eterno mientras hagas tu asana regulando la respiración a través de pranayama medita en la siempre ' +
+              'compasiva morada del corazón" </em><br />' +
+          ' <strong>T.Krishnamacharya.</strong> ',
       foto: yoga,
     },
     {
