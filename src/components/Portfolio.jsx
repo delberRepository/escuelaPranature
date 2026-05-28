@@ -6,11 +6,19 @@ import foto4 from '../portfolio/4.jpeg'
 import foto5 from '../portfolio/5.jpeg'
 import foto6 from '../portfolio/6.jpeg'
 import foto7 from '../portfolio/7.jpeg'
-import foto8 from '../portfolio/8.jpeg'
-import foto9 from '../portfolio/9.jpeg'
+import foto8 from '../portfolio/8.webp'
+import foto9 from '../portfolio/9.webp'
 import foto10 from '../portfolio/10.jpeg'
-import foto11 from '../portfolio/11.png'
-import foto12 from '../portfolio/12.jpg'
+import foto11 from '../portfolio/11.webp'
+import foto12 from '../portfolio/12.webp'
+import foto13 from '../portfolio/13.webp'
+import foto14 from '../portfolio/14.webp'
+import foto15 from '../portfolio/15.webp'
+import foto16 from '../portfolio/16.jpeg'
+import foto17 from '../portfolio/17.jpeg'
+import foto18 from '../portfolio/18.jpeg'
+import foto19 from '../portfolio/19.jpg'
+import foto20 from '../portfolio/20.png'
 
 
 
@@ -59,12 +67,12 @@ const portfolioPhotos = [
 
   },
   {
-    src: foto9,
+    src: foto10,
     alt: 'Ambiente del centro Pranature',
 
   },
   {
-    src: foto10,
+    src: foto9,
     alt: 'Ambiente del centro Pranature',
 
   },
@@ -75,6 +83,47 @@ const portfolioPhotos = [
   },
   {
     src: foto12,
+    alt: 'Ambiente del centro Pranature',
+
+  },
+  {
+    src: foto13,
+    alt: 'Ambiente del centro Pranature',
+
+  },
+  {
+    src: foto14,
+    alt: 'Ambiente del centro Pranature',
+
+  },
+  {
+    src: foto15,
+    alt: 'Ambiente del centro Pranature',
+
+  },
+
+  {
+    src: foto16,
+    alt: 'Ambiente del centro Pranature',
+
+  },
+  {
+    src: foto17,
+    alt: 'Ambiente del centro Pranature',
+
+  },
+  {
+    src: foto18,
+    alt: 'Ambiente del centro Pranature',
+
+  },
+  {
+    src: foto19,
+    alt: 'Ambiente del centro Pranature',
+
+  },
+  {
+    src: foto20,
     alt: 'Ambiente del centro Pranature',
 
   },
@@ -115,7 +164,7 @@ function Portfolio() {
               key={photo.src}
               type="button"
               className={`portfolio-item ${
-                index === 0 || index === 3 ? 'portfolio-item-featured' : ''
+                index === 0 || index === 3 || index === 9 || index === 10? 'portfolio-item-featured' : ''
               }`}
               onClick={() => setSelectedPhoto(photo)}
               aria-label={`Abrir foto: ${photo.alt}`}

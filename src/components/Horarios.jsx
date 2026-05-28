@@ -6,7 +6,7 @@ const weeklySchedule = [
       { time: '11:15 - 12:15', activity: 'Danza oriental' },
       { time: '17:30 - 18:30', activity: 'Danza oriental' },
       { time: '18:30 - 19:30', activity: 'Yoga' },
-      { time: '19:45 - 20:45', activity: 'Danza oriental' },
+      { time: '19:30 - 20:30', activity: 'Danza oriental' },
     ],
   },
   {
@@ -24,12 +24,15 @@ const weeklySchedule = [
     day: 'Jueves',
     slots: [
       { time: '18:30 - 19:30', activity: 'Danza oriental' },
-      { time: '19:30 - 20:30', activity: 'Yoga' },
+      { time: '19:30 - 20:30', activity: 'Clases privadas' },
+
     ],
   },
   {
     day: 'Viernes',
-    slots: [],
+    slots: [
+      { time: '11:15 - 12:15' , activity: 'Yoga' },
+    ],
   },
 
 ]
