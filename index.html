@@ -5,7 +5,21 @@
     <link rel="icon" type="image/svg+xml" href="/escuelaPranature/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>webpranature</title>
-    <script type="module" crossorigin src="/escuelaPranature/assets/index-DEEM2W_4.js"></script>
+    <script>
+      (function restoreRoute(location) {
+        if (!location.search.startsWith('?/')) {
+          return
+        }
+
+        var restoredPath = location.search
+          .slice(1)
+          .replace(/~and~/g, '&')
+        var target = restoredPath + location.hash
+
+        window.history.replaceState(null, '', target)
+      })(window.location)
+    </script>
+    <script type="module" crossorigin src="/escuelaPranature/assets/index-CpdW6alu.js"></script>
     <link rel="stylesheet" crossorigin href="/escuelaPranature/assets/index-CFyAlrEJ.css">
   </head>
   <body>

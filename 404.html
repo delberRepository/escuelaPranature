@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>webpranature</title>
+    <script>
+      (function redirectToSpa() {
+        var segmentCount = 1
+        var location = window.location
+        var origin = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '')
+        var basePath = location.pathname.split('/').slice(0, 1 + segmentCount).join('/')
+        var routePath = location.pathname.slice(basePath.length).replace(/^\/+/, '')
+        var search = location.search ? '&' + location.search.slice(1).replace(/&/g, '~and~') : ''
+        var hash = location.hash || ''
+
+        location.replace(origin + basePath + '/?/' + routePath + search + hash)
+      })()
+    </script>
+  </head>
+  <body></body>
+</html>
